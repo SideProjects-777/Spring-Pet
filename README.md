@@ -2,13 +2,14 @@
 
 Project designed to improve Spring Boot knowledge
 
+# 🛠️ Core Spring Framework
 Dependency Injection (DI) / Inversion of Control (IoC)
 
 Spring Core (beans, application context, etc.)
 
 Spring AOP (Aspect-Oriented Programming, like logging, transactions)
 
-🌐 Web Development
+# 🌐 Web Development
 Spring MVC (Controllers, REST APIs, Model-View-Controller pattern)
 
 Spring WebFlux (for reactive programming — non-blocking REST APIs)
