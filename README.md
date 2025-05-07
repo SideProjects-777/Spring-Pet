@@ -10,7 +10,7 @@ Spring Core (beans, application context, etc.)
 Spring AOP (Aspect-Oriented Programming, like logging, transactions)
 
 # 🌐 Web Development
-Spring MVC (Controllers, REST APIs, Model-View-Controller pattern)
+Spring MVC (Controllers, REST APIs, Model-View-Controller pattern) [Impl](https://github.com/SideProjects-777/Spring-Pet/pull/1)
 
 Spring WebFlux (for reactive programming — non-blocking REST APIs)
 
@@ -24,7 +24,7 @@ Spring JDBC (direct SQL if needed)
 Spring Transactions (managing database transactions)
 
 # 🛡️ Security
-Spring Security (authentication, authorization, OAuth2, JWT tokens)
+Spring Security (authentication, authorization, OAuth2, JWT tokens) [Impl](https://github.com/SideProjects-777/Spring-Pet/pull/2)
 
 # 🛢️ Database & Messaging
 Spring Data (JPA, MongoDB, Redis, Elasticsearch)
