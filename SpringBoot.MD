@@ -35,7 +35,7 @@ Reduces setup time by bundling related dependencies together.
 
 Consistent and curated by the Spring Boot team.
 
-# 📊 3. Actuator
+# 📊 Actuator
 Spring Boot Actuator provides production-ready features to help you monitor and manage your application.
 
 Features:
