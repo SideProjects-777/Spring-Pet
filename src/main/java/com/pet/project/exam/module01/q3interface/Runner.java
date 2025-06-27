@@ -1,8 +1,9 @@
-package com.spring.professional.exam.tutorial.module01.question03;
+package com.pet.project.exam.module01.q3interface;
 
-import com.spring.professional.exam.tutorial.module01.question03.service.FinancialReportService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+
+import com.pet.project.exam.module01.q3interface.service.FinancialReportService;
 
 @ComponentScan
 public class Runner {

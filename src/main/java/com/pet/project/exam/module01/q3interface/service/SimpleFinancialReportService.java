@@ -1,8 +1,8 @@
-package com.spring.professional.exam.tutorial.module01.question03.service;
+package com.pet.project.exam.module01.q3interface.service;
 
-import com.spring.professional.exam.tutorial.module01.question03.dao.FinancialDataDao;
-import com.spring.professional.exam.tutorial.module01.question03.ds.FinancialYearSummary;
-import com.spring.professional.exam.tutorial.module01.question03.writer.FinancialReportWriter;
+import com.pet.project.exam.module01.q3interface.dao.FinancialDataDao;
+import com.pet.project.exam.module01.q3interface.ds.FinancialYearSummary;
+import com.pet.project.exam.module01.q3interface.writer.FinancialReportWriter;
 
 class SimpleFinancialReportService {
     private final FinancialDataDao financialDataDao;

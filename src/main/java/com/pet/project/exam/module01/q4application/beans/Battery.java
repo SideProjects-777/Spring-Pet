@@ -1,4 +1,6 @@
-package com.spring.professional.exam.tutorial.module01.question04.beans;
+package com.pet.project.exam.module01.q4application.beans;
+
+
 
 import org.springframework.stereotype.Component;
 

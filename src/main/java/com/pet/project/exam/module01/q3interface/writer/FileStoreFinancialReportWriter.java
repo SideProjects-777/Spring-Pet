@@ -1,9 +1,11 @@
-package com.spring.professional.exam.tutorial.module01.question03.writer;
+package com.pet.project.exam.module01.q3interface.writer;
 
-import com.spring.professional.exam.tutorial.module01.question03.ds.FinancialMonthSummary;
-import com.spring.professional.exam.tutorial.module01.question03.ds.FinancialQuarterSummary;
-import com.spring.professional.exam.tutorial.module01.question03.ds.FinancialYearSummary;
+
 import org.springframework.stereotype.Component;
+
+import com.pet.project.exam.module01.q3interface.ds.FinancialMonthSummary;
+import com.pet.project.exam.module01.q3interface.ds.FinancialQuarterSummary;
+import com.pet.project.exam.module01.q3interface.ds.FinancialYearSummary;
 
 @Component("file-writer")
 class FileStoreFinancialReportWriter implements FinancialReportWriter {
