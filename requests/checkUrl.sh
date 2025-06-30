@@ -1,0 +1,1 @@
+curl --location 'localhost:8080/scan-invoice' --header 'Content-Type: application/json' --data '{    "url":"https://indico.un.org/event/1012743/attachments/16964/48833/Countries%20with%20IBAN.pdf"}'

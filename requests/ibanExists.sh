@@ -1,0 +1,1 @@
+curl --location 'http://localhost:8080/blacklist/ibans/AZ21NABZ000000001370100019'
