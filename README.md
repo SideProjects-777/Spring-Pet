@@ -1,55 +1,82 @@
-# Spring-Pet
+# PDF IBAN Scanner Service — Quick Manual
 
-Project designed to improve Spring Boot knowledge
+## Overview
 
-# 🛠️ Core Spring Framework
-Dependency Injection (DI) / Inversion of Control (IoC)
+This Spring Boot service scans PDF invoices from a given URL to detect blacklisted IBANs, helping prevent money laundering. It also provides REST endpoints to manage the blacklist of IBANs.
 
-Spring Core (beans, application context, etc.)
+---
 
-Spring AOP (Aspect-Oriented Programming, like logging, transactions)
+## Prerequisites
 
-# 🌐 Web Development
-Spring MVC (Controllers, REST APIs, Model-View-Controller pattern) [Impl](https://github.com/SideProjects-777/Spring-Pet/pull/1)
+- Maven 3.6+
 
-Spring WebFlux (for reactive programming — non-blocking REST APIs)
+---
 
-# 🔥 Backend Essentials
-Spring Boot (autoconfiguration, starters, actuator)
+## Run
 
-Spring Data JPA (working with databases via Hibernate/JPA)
+```shell
+mvn clean install spring-boot:run
+```
 
-Spring JDBC (direct SQL if needed)
+The service will start on port `8080` by default.
 
-Spring Transactions (managing database transactions)
+---
 
-# 🛡️ Security
-Spring Security (authentication, authorization, OAuth2, JWT tokens) [Impl](https://github.com/SideProjects-777/Spring-Pet/pull/2)
+## API Endpoints
 
-# 🛢️ Database & Messaging
-Spring Data (JPA, MongoDB, Redis, Elasticsearch)
+### PDFs
 
-Spring Batch (for large-volume batch jobs)
+```
+https://togetherfordevelopment.com/wp-content/uploads/2017/10/Bank-account-details.pdf
+https://indico.un.org/event/1012743/attachments/16964/48833/Countries%20with%20IBAN.pdf
+```
 
-Spring Integration (for building event-driven architectures)
+---
 
-Spring AMQP (RabbitMQ) and Spring Kafka (Kafka integration)
+### 1. Scan PDF Invoice for Blacklisted IBANs
 
-# ☁️ Cloud & Microservices
-Spring Cloud (building microservices with features like config server, service discovery with Eureka, circuit breaker with Resilience4j)
+- **URL:** `POST /scan-invoice`
+- **Request Body:**
 
-Spring Cloud Gateway (API Gateway)
+```json
+{
+  "url": "https://indico.un.org/event/1012743/attachments/16964/48833/Countries%20with%20IBAN.pdf"
+}
+```
 
-Spring Config (externalize configuration)
+- **Response:**
 
-# 🧪 Testing
-Spring Boot Test (unit and integration testing with Spring context)
+- **200 OK** if no blacklisted IBANs found:
 
-MockMvc for testing REST APIs
+```json
+{
+  "blacklistedFound": false,
+  "blacklistedIBANs": []
+}
+```
 
-# 🌟 Bonus (Good to know)
-Spring GraphQL (if you’re building GraphQL APIs)
+- **400 Bad Request** if blacklisted IBANs found:
 
-Spring Native / GraalVM (for compiling Spring apps into native images — huge for performance)
+```json
+{
+  "blacklistedFound": true,
+  "blacklistedIBANs": ["DE89370400440532013000"]
+}
+```
 
-Spring REST Docs (auto-generating API documentation)
+---
+
+### 2. Manage Blacklisted IBANs
+
+| Method | Endpoint | Description |
+|---------|---------|---------|
+| GET | `/blacklist/ibans` | List all blacklisted IBANs |
+| POST | `/blacklist/ibans` | Add an IBAN to blacklist |
+| DELETE | `/blacklist/ibans/{iban}` | Remove an IBAN from blacklist |
+| GET | `/blacklist/ibans/{iban}` | Check if an IBAN is blacklisted |  
+
+---
+
+## Test places
+
+After starting the service, please proceed to the `requests` folder, where you can run the provided shell scripts.

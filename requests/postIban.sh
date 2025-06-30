@@ -1,0 +1,1 @@
+curl --location 'http://localhost:8080/blacklist/ibans' --header 'Content-Type: application/json' --data '{    "iban": "AZ21NABZ00000000137010001944" }'

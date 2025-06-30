@@ -1,0 +1,1 @@
+curl --location --request DELETE 'localhost:8080/blacklist/ibans/BG80BNBG96611020345678'
